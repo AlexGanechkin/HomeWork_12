@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пост</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<main>
+
+    <h1>Ошибка загрузки</h1>
+    {% if error == 1 %}
+        <p>Файл имеет неверное расширение, допустимые расширения: *.jpg, *.png</p>
+    {% elif error == 2 %}
+        <p>Не введен текст для поста!</p>
+    {% elif error == 3 %}
+        <p>Файл не загружен!</p>
+    {% endif %}
+    <a href="/post" class="button">Повторить</a>
+
+</main>
+</body>
+</html>
